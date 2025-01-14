@@ -20,6 +20,7 @@ export default {
         secondary: "#FECACC",
         "secondary-light": "rgba(254, 202, 204, 0.16)",
         "secondary-dark": "#CE6889",
+        "secondary-dark-transparent": "rgba(206, 104, 137, 0.33)",
       },
     },
   },

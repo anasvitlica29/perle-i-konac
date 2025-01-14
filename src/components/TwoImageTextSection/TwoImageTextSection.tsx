@@ -16,7 +16,7 @@ const TwoImageTextSection = ({
 }: Props) => {
   return (
     <div
-      className={`flex ${reverse ? "flex-col-reverse md:flex-row-reverse" : "flex-col md:flex-row"}  md:flex-row gap-8 md:gap-12 justify-center`}
+      className={`flex ${reverse ? "flex-col-reverse md:flex-row-reverse md:mb-28" : "flex-col md:flex-row"}  md:flex-row gap-8 md:gap-12 justify-center`}
     >
       <div
         className={`relative w-full md:w-1/3 flex justify-end ${reverse ? "px-5 md:pr-24 md:pl-0" : "px-5 md:pl-24 md:pr-0"}`}
