@@ -44,7 +44,7 @@ const TwoImageTextSection = ({
         className={`relative flex items-center gap-5 flex-col justify-center w-full md:w-2/3 py-5 md:py-0 ${reverse ? "px-5 md:pl-24 md:pr-5" : "px-5 md:pr-24 md:pl-5"}`}
       >
         <div
-          className={`absolute -z-10 top-1/2 -translate-y-1/2 left-0 h-full md:h-1/2 w-full ${reverse ? "bg-secondary-light" : "bg-primary-light"}`}
+          className={`absolute -z-10 top-1/2 -translate-y-1/2 left-0 h-full md:h-1/2 w-full ${reverse ? "bg-secondary-light" : "bg-primary-lightest"}`}
         />
         <h2
           className={`font-serif text-5xl w-full ${reverse ? "text-secondary-dark" : "text-primary"}`}

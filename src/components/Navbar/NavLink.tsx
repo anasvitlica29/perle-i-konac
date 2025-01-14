@@ -11,7 +11,10 @@ const NavLink = ({ text, href }: Props) => {
   const pathname = usePathname();
 
   return (
-    <Link className={`${href === pathname ? "font-bold" : ""}`} href={href}>
+    <Link
+      className={`${href === pathname ? "font-bold" : ""} hover:text-primary-light transition-colors`}
+      href={href}
+    >
       {text}
     </Link>
   );
