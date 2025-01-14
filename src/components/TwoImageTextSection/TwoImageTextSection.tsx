@@ -26,7 +26,7 @@ const TwoImageTextSection = ({
           alt="First image"
           height={200}
           width={400}
-          className="rounded-3xl h-[400px] md:h-[500px] w-full object-cover shadow-lg"
+          className="rounded-3xl h-[400px] md:h-[500px] w-full object-cover shadow-xl"
         />
         <Image
           src={secondImageUrl}
@@ -43,8 +43,16 @@ const TwoImageTextSection = ({
         <div
           className={`absolute top-1/2 -translate-y-1/2 left-0 h-full md:h-1/2 w-full ${reverse ? "bg-secondary-light" : "bg-primary-light"}`}
         />
-        <h2 className="font-serif text-4xl w-full">{primaryText}</h2>
-        <p className="w-full">{secondaryText}</p>
+        <h2
+          className={`font-serif text-5xl w-full ${reverse ? "text-secondary-dark" : "text-primary"}`}
+        >
+          {primaryText}
+        </h2>
+        <p
+          className={`w-full ${reverse ? "text-secondary-dark" : "text-primary"}`}
+        >
+          {secondaryText}
+        </p>
       </div>
     </div>
   );
