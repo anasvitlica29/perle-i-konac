@@ -8,9 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ["Belleza"],
+        sans: ["Quicksand"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#36598C",
+        secondary: "#FECACC",
       },
     },
   },

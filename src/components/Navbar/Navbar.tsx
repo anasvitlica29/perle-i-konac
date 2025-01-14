@@ -3,7 +3,7 @@ import NavLink from "@/components/Navbar/NavLink";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center px-5 md:px-12 py-5 gap-5 md:gap-0">
+    <nav className="flex justify-between items-center px-5 md:px-12 py-5 gap-5 md:gap-0 z-10 fixed w-full">
       <div className="">
         <LogoLink />
       </div>

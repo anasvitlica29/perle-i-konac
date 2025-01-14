@@ -3,13 +3,11 @@ import { Belleza, Quicksand } from "next/font/google";
 import "./globals.css";
 import { Footer, Navbar } from "@/components";
 
-const quicksand = Quicksand({
-  variable: "--font-quicksand",
+const quicksand = Quicksand<"--font-quicksand">({
   subsets: ["latin"],
 });
 
-const belleza = Belleza({
-  variable: "--font-belleza",
+const belleza = Belleza<"--font-belleza">({
   subsets: ["latin"],
   weight: "400",
 });

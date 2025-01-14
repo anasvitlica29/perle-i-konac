@@ -1,0 +1,16 @@
+.hero {
+    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+    clip-path: polygon(
+            0% 0%,    /* Top-left corner */
+            100% 0%,  /* Top-right corner */
+            100% 80%, /* Start of swirl (right side) */
+            85% 87%,  /* First dip */
+            75% 92%,  /* Deeper drop */
+            65% 95%,  /* Smooth transition */
+            50% 97%,  /* Lowest peak of the swirl */
+            35% 95%,  /* Climbing back */
+            25% 92%,  /* Opposite dip */
+            15% 87%,  /* Second curve upwards */
+            0% 80%    /* End of swirl (left side) */
+    );
+}
