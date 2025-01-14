@@ -14,7 +14,11 @@ const Button = ({ href, text, variant = "primary" }: Props) => {
       {text}
     </Link>
   ) : (
-    <button>{text}</button>
+    <button
+      className={`${variant === "primary" ? "bg-primary" : "bg-secondary-dark"} text-white font-bold rounded py-2 px-8`}
+    >
+      {text}
+    </button>
   );
 };
 

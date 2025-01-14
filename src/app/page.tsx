@@ -13,6 +13,7 @@ export default function Home() {
           imageUrl="/hero.jpg"
         />
         <TwoImageTextSection
+          cta="Istraži"
           firstImageUrl="/nit.jpg"
           secondImageUrl="/nit.jpg"
           primaryText="Nit po nit"
@@ -20,6 +21,7 @@ export default function Home() {
         />
         <TwoImageTextSection
           reverse
+          cta="Istraži"
           firstImageUrl="/nit.jpg"
           secondImageUrl="/nit.jpg"
           primaryText="Perla po perla"
