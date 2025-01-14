@@ -14,13 +14,12 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`flex justify-between items-center px-5 md:px-12 py-5 gap-5 md:gap-0 z-10 fixed w-full ${isScrolled ? "bg-background shadow-lg" : "bg-transparent"} transition-colors`}
+      className={`flex justify-between items-center px-5 md:px-12 py-2 gap-5 md:gap-0 z-10 fixed w-full ${isScrolled ? "bg-background shadow-lg" : "bg-transparent"} transition-colors`}
     >
       <div className="">
         <LogoLink />

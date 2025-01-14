@@ -4,7 +4,13 @@ import Image from "next/image";
 const LogoLink = () => {
   return (
     <Link href="/">
-      <Image src="/logo.png" alt="Perle i Konac" width={120} height={120} />
+      <Image
+        src="/logo.png"
+        alt="Perle i Konac"
+        className="h-16 w-auto"
+        width={75}
+        height={75}
+      />
     </Link>
   );
 };

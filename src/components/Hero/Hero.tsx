@@ -11,7 +11,7 @@ interface Props {
 }
 const Hero = ({ mainText, secondaryText, href, cta, imageUrl }: Props) => {
   return (
-    <div className="hero w-full h-[31rem] flex flex-col items-center justify-center gap-5 bg-scroll relative">
+    <div className="hero w-full h-[31rem] flex flex-col items-center justify-center gap-5 bg-scroll relative mb-16 md:mb-0">
       {imageUrl ? (
         <Image
           className="absolute top-0 left-0 w-full h-full object-cover opacity-25 -z-10"
