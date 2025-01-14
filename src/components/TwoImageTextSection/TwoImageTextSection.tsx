@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "@/components/Button/Button";
 
 type Props = {
   firstImageUrl: string;
@@ -53,6 +54,11 @@ const TwoImageTextSection = ({
         >
           {secondaryText}
         </p>
+        <Button
+          text={"Istrazi"}
+          href="/shop"
+          variant={reverse ? "secondary" : "primary"}
+        />
       </div>
     </div>
   );
