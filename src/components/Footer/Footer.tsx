@@ -1,4 +1,5 @@
 import { LogoLink } from "@/components";
+import NavLink from "@/components/Navbar/NavLink";
 
 const Footer = () => {
   return (
@@ -8,8 +9,18 @@ const Footer = () => {
           <LogoLink />
           <div>socials</div>
         </div>
-        <div>Links</div>
-        <div>Search</div>
+        <div className="flex flex-col gap-3">
+          <NavLink text="Početna" href="/" />
+          <NavLink text="Shop" href="/shop" />
+          <NavLink text="FAQ" href="/faq" />
+        </div>
+        <div className="pr-r md:pr-24">
+          <p>
+            Istražite naše proizvode i obradujte sebe i svoje najdraže
+            jedinstvenim poklonom.
+          </p>
+          <div>search</div>
+        </div>
       </div>
       <div className="bg-background text-primary text-center text-sm">
         Copyright Ana Tot 2025. All rights reserved.
