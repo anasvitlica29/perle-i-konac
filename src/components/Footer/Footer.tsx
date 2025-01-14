@@ -1,5 +1,6 @@
 import { LogoLink, SearchBar } from "@/components";
 import NavLink from "@/components/Navbar/NavLink";
+import SocialMediaButton from "@/components/SocialMediaButton/SocialMediaButton";
 
 const Footer = () => {
   return (
@@ -7,7 +8,10 @@ const Footer = () => {
       <div className="bg-secondary-dark-transparent flex justify-between py-6 items-center">
         <div className="bg-background w-1/3 rounded-r-2xl pl-5 md:pl-24 py-8 flex flex-col items-center gap-5">
           <LogoLink />
-          <div>socials</div>
+          <div className="flex gap-3 items-center">
+            <SocialMediaButton type="instagram" />
+            <SocialMediaButton type="facebook" />
+          </div>
         </div>
         <div className="flex flex-col gap-3">
           <NavLink text="Početna" href="/" />
