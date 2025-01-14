@@ -16,9 +16,11 @@ const TwoImageTextSection = ({
 }: Props) => {
   return (
     <div
-      className={`flex ${reverse ? "flex-col-reverse md:flex-row-reverse" : "flex-col md:flex-row"}  md:flex-row gap-8 md:gap-0 justify-center`}
+      className={`flex ${reverse ? "flex-col-reverse md:flex-row-reverse" : "flex-col md:flex-row"}  md:flex-row gap-8 md:gap-12 justify-center`}
     >
-      <div className="relative flex justify-end px-5 md:px-12">
+      <div
+        className={`relative  w-full md:w-1/3 flex justify-end ${reverse ? "px-5 md:pr-24 md:pl-0" : "px-5 md:pl-24 md:pr-0"}`}
+      >
         <Image
           src={firstImageUrl}
           alt="First image"
@@ -31,13 +33,15 @@ const TwoImageTextSection = ({
           alt="Second image"
           height={400}
           width={400}
-          className="rounded-3xl h-full w-full object-cover absolute -top-20 md:top-20 -left-1/3 opacity-10 -z-10"
+          className={`rounded-3xl h-full w-full object-cover absolute -top-20 md:top-20 ${reverse ? "left-0 md:left-1/3" : "left-0 md:-left-1/3"} opacity-10 -z-10`}
         />
       </div>
 
-      <div className="flex items-center flex-col gap-5">
-        <h2 className="font-serif text-4xl w-2/3">{primaryText}</h2>
-        <p className="w-2/3">{secondaryText}</p>
+      <div
+        className={`flex w-full md:w-2/3 items-center flex-col justify-center gap-5 ${reverse ? "px-5 md:pl-24 md:pr-0" : "px-5 md:pr-24 md:pl-0"}`}
+      >
+        <h2 className="font-serif text-4xl w-full">{primaryText}</h2>
+        <p className="w-full">{secondaryText}</p>
       </div>
     </div>
   );
