@@ -1,10 +1,11 @@
 import Hero from "@/components/Hero/Hero";
 import { TwoImageTextSection } from "@/components";
+import TextWithBackground from "@/components/TextWithBackground/TextWithBackground";
 
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-quicksand)]">
-      <main className="flex flex-col gap-28">
+      <main className="flex flex-col gap-12">
         <Hero
           mainText="Perle i konac"
           secondaryText="Autentičnost utkana u svaki proizvod"
@@ -26,6 +27,12 @@ export default function Home() {
           secondImageUrl="/nit.jpg"
           primaryText="Perla po perla"
           secondaryText="Naša inspiracija leži u kombinaciji elegancije i funkcionalnosti. Perle koje koristimo pažljivo su birane kako bi svaka kreacija zračila sofisticiranošću i unikatnošću. Od klasičnih narukvica i ogrlica do modernih aksesoara, svaki komad nosi dašak vašeg stila i posebnosti."
+        />
+        <TextWithBackground
+          text={
+            "Istražite naše proizvode i obradujte sebe i svoje najdraže jedinstvenim poklonom."
+          }
+          backgroundImageUrl="/yarn.jpg"
         />
       </main>
     </div>
