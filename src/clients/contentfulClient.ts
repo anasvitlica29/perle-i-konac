@@ -46,7 +46,7 @@ const getModifiersByIds = async (ids: string[]): Promise<Modifier[]> => {
 
     return response.productModifierCollection.items;
   } catch (error) {
-    console.error(">>> GraphQL error", error);
+    console.error("Error fetching modifiers.", error);
     return [];
   }
 };

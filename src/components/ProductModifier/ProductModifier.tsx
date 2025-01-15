@@ -1,4 +1,5 @@
 import { Modifier } from "@/clients/types/contentful";
+import ColorPicker from "@/components/ProductModifier/ColorPicker";
 
 type Props = {
   modifier: Modifier;
@@ -9,15 +10,10 @@ const ProductModifier = ({ modifier }: Props) => {
   switch (name) {
     case "Color":
       return (
-        <div className="flex flex-row justify-center items-center p-3">
-          {modifier.valuesCollection.items.map((value) => (
-            <div key={`${modifier.sys.id}-${value.name}`}>{value.name}</div>
-          ))}
-          {/*<div className="rounded-full bg-secondary w-2 h-2 shadow" />*/}
-          {/*<div className="rounded-full bg-secondary-dark w-2 h-2 -translate-x-[2px]" />*/}
-          {/*<div className="rounded-full bg-primary-light w-2 h-2 -translate-x-[4px]" />*/}
-          {/*<div className="rounded-full bg-primary w-3 h-3 -translate-x-[7px]" />*/}
-        </div>
+        <ColorPicker
+          key={`${modifier.sys.id}-${name}`}
+          colors={modifier.valuesCollection.items}
+        />
       );
     default:
       return null;

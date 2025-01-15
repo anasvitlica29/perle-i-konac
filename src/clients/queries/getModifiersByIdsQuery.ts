@@ -11,6 +11,7 @@ export const GET_MODIFIERS_BY_IDS_QUERY = (ids: string[]) => {
           valuesCollection {
             items {
               name
+              value
             }
           }
         }

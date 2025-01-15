@@ -6,7 +6,7 @@ const ShopPage = async () => {
 
   return (
     <div className="pt-24">
-      <div className="flex gap-5 justify-center px-24">
+      <div className="flex items-start md:justify-center px-5 md:px-24 flex-wrap md:gap-10 h-full">
         {products.map((product) => (
           <ProductCard key={product.sys.id} product={product} />
         ))}
