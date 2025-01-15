@@ -6,6 +6,7 @@ export const GET_ALL_PRODUCTS_QUERY = `
           id
         }
         title
+        price
       }
     }
   }

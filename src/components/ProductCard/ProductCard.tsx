@@ -7,7 +7,7 @@ type Props = {
 };
 const ProductCard = ({ product }: Props) => {
   const { title, price } = product;
-  console.log(product);
+
   return (
     <div className="relative bg-background rounded shadow-lg flex-1 p-4">
       <button className="absolute z-10 top-6 right-6 h-8 w-8 bg-background rounded-full shadow outline-transparent">
@@ -27,7 +27,7 @@ const ProductCard = ({ product }: Props) => {
       <div className="flex justify-between mt-3">
         <div>
           <h3 className="text-lg font-bold">{title}</h3>
-          <span>{1800} RSD</span>
+          <span>{price} RSD</span>
         </div>
         <div>
           <div className="flex flex-row justify-center items-center p-3">
