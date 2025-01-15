@@ -11,12 +11,12 @@ const ProductCard = async ({ product }: Props) => {
   const { title, price, modifiersCollection } = product;
 
   const modifiers = modifiersCollection.items;
-
   const modifierIds = modifiers
     .filter((m, i, array) => array.indexOf(m) === i)
     .map((m) => m.sys.id);
   const modifierResponse = await getModifiersByIds(modifierIds);
 
+  console.log(modifierResponse);
   return (
     <div className="md:max-w-72 relative bg-background rounded shadow-lg min-w-40 md:min-w-60 basis-1/2 md:flex-1 p-2 md:p-4 mb-3">
       <button className="absolute z-10 top-5 right-5 md:top-6 md:right-6 h-8 w-8 bg-background rounded-full shadow outline-transparent">

@@ -8,12 +8,7 @@ export const GET_MODIFIERS_BY_IDS_QUERY = (ids: string[]) => {
             id
           }
           name
-          valuesCollection {
-            items {
-              name
-              value
-            }
-          }
+          values
         }
       }
     }

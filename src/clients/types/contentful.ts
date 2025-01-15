@@ -10,24 +10,14 @@ export interface ProductModifierCollection {
   };
 }
 
-type ModifierName = "Color";
+type ModifierName = "Color" | "Size";
 
 export interface Modifier {
   sys: {
     id: string;
   };
   name: ModifierName;
-  valuesCollection: {
-    items: {
-      name: string;
-      value: string;
-    }[];
-  };
-}
-
-export interface Color {
-  name: string;
-  value: string;
+  values: string[];
 }
 
 export interface Product {

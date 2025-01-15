@@ -12,8 +12,16 @@ const ProductModifier = ({ modifier }: Props) => {
       return (
         <ColorPicker
           key={`${modifier.sys.id}-${name}`}
-          colors={modifier.valuesCollection.items}
+          colors={modifier.values}
         />
+      );
+    case "Size":
+      return (
+        <div>
+          {modifier.values.map((item) => (
+            <>item</>
+          ))}
+        </div>
       );
     default:
       return null;
