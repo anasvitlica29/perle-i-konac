@@ -9,15 +9,14 @@ type Props = {
 const ColorPicker = ({ colors }: Props) => {
   const [selected, setSelected] = useState<Color>(colors[0]);
 
+  // TODO: onClick
   return (
-    <div className="flex flex-row-reverse items-center">
-      {colors.map((c) => (
-        <div
-          key={c.name}
-          className={`border ${selected.value === c.value ? "border-primary" : "border-transparent"} w-5 h-5 rounded-full`}
-          style={{ backgroundColor: c.value }}
-        />
-      ))}
+    <div className="flex items-center gap-0.5">
+      <div
+        className={`w-4 h-4 rounded-full`}
+        style={{ backgroundColor: selected.value }}
+      />
+      <span className="text-sm">+{colors.length}</span>
     </div>
   );
 };

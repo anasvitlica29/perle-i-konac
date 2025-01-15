@@ -5,3 +5,4 @@ export { default as TwoImageTextSection } from "./TwoImageTextSection/TwoImageTe
 export { default as SearchBar } from "./SearchBar/SearchBar";
 export { default as ProductCard } from "./ProductCard/ProductCard";
 export { default as ProductModifier } from "./ProductModifier/ProductModifier";
+export { default as Hero } from "./Hero/Hero";

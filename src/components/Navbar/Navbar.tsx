@@ -8,7 +8,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the page is scrolled more than a specific threshold
       setIsScrolled(window.scrollY > 10);
     };
 
