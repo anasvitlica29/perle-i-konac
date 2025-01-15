@@ -4,3 +4,4 @@ export { default as LogoLink } from "./LogoLink/LogoLink";
 export { default as TwoImageTextSection } from "./TwoImageTextSection/TwoImageTextSection";
 export { default as SearchBar } from "./SearchBar/SearchBar";
 export { default as ProductCard } from "./ProductCard/ProductCard";
+export { default as ProductModifier } from "./ProductModifier/ProductModifier";

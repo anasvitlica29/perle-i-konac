@@ -1,12 +1,21 @@
 import { Product } from "@/clients/types/contentful";
 import Image from "next/image";
 import { PlusIcon } from "@/vectors";
+import { ProductModifier } from "@/components";
+import { getModifiersByIds } from "@/clients/contentfulClient";
 
 type Props = {
   product: Product;
 };
-const ProductCard = ({ product }: Props) => {
-  const { title, price } = product;
+const ProductCard = async ({ product }: Props) => {
+  const { title, price, modifiersCollection } = product;
+
+  const modifiers = modifiersCollection.items;
+
+  const modifierIds = modifiers
+    .filter((m, i, array) => array.indexOf(m) === i)
+    .map((m) => m.sys.id);
+  const modifierResponse = await getModifiersByIds(modifierIds);
 
   return (
     <div className="relative bg-background rounded shadow-lg flex-1 p-4">
@@ -30,12 +39,12 @@ const ProductCard = ({ product }: Props) => {
           <span>{price} RSD</span>
         </div>
         <div>
-          <div className="flex flex-row justify-center items-center p-3">
-            <div className="rounded-full bg-secondary w-2 h-2 shadow" />
-            <div className="rounded-full bg-secondary-dark w-2 h-2 -translate-x-[2px]" />
-            <div className="rounded-full bg-primary-light w-2 h-2 -translate-x-[4px]" />
-            <div className="rounded-full bg-primary w-3 h-3 -translate-x-[7px]" />
-          </div>
+          {modifierResponse.map((modifier) => (
+            <ProductModifier
+              key={`${product.sys.id}-${modifier.sys.id}`}
+              modifier={modifier}
+            />
+          ))}
         </div>
       </div>
     </div>
