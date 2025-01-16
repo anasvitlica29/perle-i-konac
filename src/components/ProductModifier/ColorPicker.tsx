@@ -16,7 +16,7 @@ const ColorPicker = ({ colors }: Props) => {
         className={`w-4 h-4 rounded-full`}
         style={{ backgroundColor: "red" }}
       />
-      <span className="text-sm">+{colors.length}</span>
+      <span className="text-sm">+{colors.length - 1}</span>
     </div>
   );
 };
