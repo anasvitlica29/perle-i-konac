@@ -1,20 +1,18 @@
 import { Product } from "@/clients/types/contentful";
 import Image from "next/image";
 import { PlusIcon } from "@/vectors";
-import { ProductModifier } from "@/components";
-import { getModifiersByIds } from "@/clients/contentfulClient";
 
 type Props = {
   product: Product;
 };
 const ProductCard = async ({ product }: Props) => {
-  const { title, price, modifiersCollection } = product;
+  const { title, price } = product;
 
-  const modifiers = modifiersCollection.items;
-  const modifierIds = modifiers
-    .filter((m, i, array) => array.indexOf(m) === i)
-    .map((m) => m.sys.id);
-  const modifierResponse = await getModifiersByIds(modifierIds);
+  // const modifiers = modifiersCollection.items;
+  // const modifierIds = modifiers
+  //   .filter((m, i, array) => array.indexOf(m) === i)
+  //   .map((m) => m.sys.id);
+  // const modifierResponse = await getModifiersByIds(modifierIds);
 
   return (
     <div className="md:max-w-72 relative bg-background rounded shadow-lg min-w-40 md:min-w-60 basis-1/2 md:flex-1 p-2 md:p-4 mb-3">

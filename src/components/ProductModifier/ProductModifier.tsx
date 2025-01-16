@@ -19,7 +19,7 @@ const ProductModifier = ({ modifier }: Props) => {
       return (
         <div>
           {modifier.values.map((item) => (
-            <>item</>
+            <>{item}</>
           ))}
         </div>
       );

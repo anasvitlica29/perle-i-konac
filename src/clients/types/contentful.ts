@@ -1,6 +1,6 @@
 export interface ProductCollection {
   productCollection: {
-    items: any[];
+    items: Product[];
   };
 }
 
