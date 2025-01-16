@@ -11,7 +11,7 @@ interface Props {
 }
 const Hero = ({ mainText, secondaryText, href, cta, imageUrl }: Props) => {
   return (
-    <div className="hero w-full h-[31rem] flex flex-col items-center justify-center gap-5 bg-scroll relative mb-16 md:mb-0">
+    <div className="hero w-full h-[31rem] flex flex-col items-center justify-center gap-5 bg-scroll relative mb-16 md:mb-0 px-5">
       {imageUrl ? (
         <Image
           className="absolute top-0 left-0 w-full h-full object-cover opacity-25 -z-10"
@@ -22,9 +22,9 @@ const Hero = ({ mainText, secondaryText, href, cta, imageUrl }: Props) => {
         />
       ) : null}
 
-      <div>
-        <h1 className="font-serif text-6xl">{mainText}</h1>
-        <h4 className="text-lg">{secondaryText}</h4>
+      <div className="text-center md:text-right">
+        <h1 className="font-serif text-5xl md:text-6xl">{mainText}</h1>
+        <h4 className="text-md md:text-lg">{secondaryText}</h4>
       </div>
       {href && cta ? <Button variant="primary" href={href} text={cta} /> : null}
     </div>
