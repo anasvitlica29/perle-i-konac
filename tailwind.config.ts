@@ -23,6 +23,9 @@ export default {
         "secondary-dark": "#CE6889",
         "secondary-dark-transparent": "rgba(206, 104, 137, 0.33)",
       },
+      transitionProperty: {
+        height: "height",
+      },
     },
   },
   plugins: [],

@@ -1,6 +1,6 @@
 .hero {
     background: linear-gradient(to bottom, #f8f8f8, #ffffff);
-    clip-path: polygon(
+    clipPath: polygon(
             0% 0%,    /* Top-left corner */
             100% 0%,  /* Top-right corner */
             100% 80%, /* Start of swirl (right side) */
