@@ -13,7 +13,7 @@ const Footer = () => {
             <SocialMediaButton type="facebook" />
           </div>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 mx-3">
           <NavLink text="Početna" href="/" />
           <NavLink text="Shop" href="/shop" />
           <NavLink text="FAQ" href="/faq" />
