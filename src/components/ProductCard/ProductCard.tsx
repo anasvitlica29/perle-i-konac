@@ -41,7 +41,11 @@ const ProductCard = ({ product }: Props) => {
         <CartIcon className="h-6 w-6 m-auto " />
       </button>
 
-      <ProductCardOverlay close={closeOverlay} open={overlayVisible} />
+      <ProductCardOverlay
+        close={closeOverlay}
+        open={overlayVisible}
+        title={title}
+      />
 
       <div className="flex justify-between items-center mt-3">
         <div>
